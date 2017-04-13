@@ -8,8 +8,18 @@
 
 import UIKit
 
-class ViewController: UIViewController {
 
+class ViewController: UIViewController {
+    var cPressed = 0
+    
+    @IBOutlet weak var buttonLabel: UILabel!
+    @IBOutlet weak var button: UIButton!
+
+    @IBAction func buttonPressed(_ sender: Any) {
+      cPressed+=1
+        buttonLabel.text = String(cPressed)
+    
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
